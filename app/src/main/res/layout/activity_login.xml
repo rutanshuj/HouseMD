@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.admin.housemd.LoginActivity">
+
+
+    <EditText
+        android:id="@+id/username"
+        android:hint="Enter Username"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="90dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginTop="61dp"
+        android:layout_centerHorizontal="true" />
+    <EditText
+        android:hint="Enter Password"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="196dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_below="@+id/username"
+        android:layout_alignLeft="@+id/username"
+        android:layout_alignStart="@+id/username"
+        android:layout_marginTop="53dp"
+        android:id="@+id/editText" />
+
+    <Button
+        android:text="Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="311dp"
+        tools:layout_editor_absoluteX="223dp"
+        android:gravity="center"
+        android:layout_marginTop="55dp"
+        android:id="@+id/button3"
+        android:layout_below="@+id/editText"
+        android:layout_alignLeft="@+id/button4"
+        android:layout_alignStart="@+id/button4" />
+
+    <Button
+        android:text="Sign Up"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button4" />
+</RelativeLayout>
