@@ -17,7 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".NavigationActivity"></activity>
+        <activity
+            android:name=".NavigationActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name=".SymptomsFrag"></activity>
     </application>
 
 </manifest>
