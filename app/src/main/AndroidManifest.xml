@@ -20,7 +20,7 @@
         <activity
             android:name=".NavigationActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity android:name=".SymptomsFrag"></activity>
+        <activity android:name=".Symptoms1Frag"></activity>
     </application>
 
 </manifest>
