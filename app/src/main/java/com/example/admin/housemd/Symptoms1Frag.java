@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Symptoms1Frag extends Fragment {
@@ -28,6 +29,7 @@ public class Symptoms1Frag extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_symptoms_frag, container, false);
         final ListView chl = (ListView) view.findViewById(R.id.symptoms_list_view);
+        final ListView shl = (ListView) view.findViewById(R.id.checkedList);
         b1 = (Button) view.findViewById(R.id.showResult);
         chl.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         inputSearch = (EditText) view.findViewById(R.id.inputSearch);
@@ -37,7 +39,10 @@ public class Symptoms1Frag extends Fragment {
         String[] items = {"Nuasea", "cdcd", "cdcdcdc", "rutanshu" };
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), R.layout.simplerow,R.id.txt_lan, items);
 
+
         chl.setAdapter(adapter);
+        final ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(getContext(), R.layout.checkedrow,R.id.text_sl, selectedItems);
+
 
         chl.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -46,16 +51,24 @@ public class Symptoms1Frag extends Fragment {
 
                 if(selectedItems.contains(selectedItem)){
                     selectedItems.remove(selectedItem);
-                    int duration = 500;  //miliseconds
-                    int offset = 0;      //fromListTop
+                    shl.setAdapter(adapter2);
 
-                    chl.smoothScrollToPositionFromTop(position,offset,duration);
+
+                    //int duration = 500;  //miliseconds
+//                    int offset = 0;      //fromListTop
+//
+//                    chl.smoothScrollToPositionFromTop(position,offset,duration);
+//                    chl.setSelection(position);
+
                 }
                 else {
                     selectedItems.add(selectedItem);
+                    shl.setAdapter(adapter2);
+                    shl.isShown();
                 }
             }
         });
+
         inputSearch.addTextChangedListener(new TextWatcher() {
 
             @Override
@@ -89,6 +102,8 @@ public class Symptoms1Frag extends Fragment {
                 Toast.makeText(getContext(), "You have selected \n" + items, Toast.LENGTH_SHORT).show();
             }
         });
+
+
         return view;
     }
 

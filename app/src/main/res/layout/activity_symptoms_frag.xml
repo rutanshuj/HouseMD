@@ -15,8 +15,9 @@
         android:id="@+id/inputSearch"
         android:inputType="textVisiblePassword"/>
     <ListView
+        android:id="@+id/checkedList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         />
     <ListView
         android:layout_width="match_parent"
