@@ -25,6 +25,8 @@ public class NavigationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+
+        mp1_toolbar = (Toolbar) findViewById(R.id.toolbar_mp1);
         mp1NavigationView = (NavigationView) findViewById(R.id.mainPage1DrawerView);
         mp1NavigationLayout = (DrawerLayout) findViewById(R.id.mainPage1DrawerLayout);
 
