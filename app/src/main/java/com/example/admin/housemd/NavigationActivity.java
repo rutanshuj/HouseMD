@@ -33,7 +33,7 @@ public class NavigationActivity extends AppCompatActivity {
 
         mp1FragmentManager = getSupportFragmentManager();
         mp1FragmentTransaction = mp1FragmentManager.beginTransaction();
-        mp1FragmentTransaction.replace(R.id.containerToBeFilled, new SymptomsFrag()).commit();
+        mp1FragmentTransaction.replace(R.id.containerToBeFilled, new Symptoms1Frag()).commit();
 
         mp1NavigationView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
             @Override
@@ -51,10 +51,10 @@ public class NavigationActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case R.id.home:
-                        fragmentClass = SymptomsFrag.class;
+                        fragmentClass = Symptoms1Frag.class;
                         break;
                     case R.id.symptoms:
-                        fragmentClass = SymptomsFrag.class;
+                        fragmentClass = Symptoms1Frag.class;
                         break;
                 }
                 try {
