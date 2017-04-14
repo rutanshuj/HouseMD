@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.housemd.SignUp"
+    android:layout_marginTop="10dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_name"
+        android:hint="NAME"
+        android:textAlignment="center"
+        android:background="@drawable/rectangle"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_email"
+        android:layout_below="@+id/user_name"
+        android:hint="EMAIL"
+        android:textAlignment="center"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/rectangle"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_password"
+        android:layout_below="@+id/user_email"
+        android:hint="PASSWORD"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:background="@drawable/rectangle"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_phone"
+        android:layout_below="@+id/user_password"
+        android:hint="PHONE"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:background="@drawable/rectangle"
+        android:layout_marginBottom="5dp"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_bloodgoup"
+        android:layout_below="@id/user_phone"
+        android:entries="@array/bloodgroup"
+        android:textAlignment="center"
+        android:layout_marginBottom="5dp">
+    </Spinner>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_sex"
+        android:layout_below="@+id/user_bloodgoup"
+        android:entries="@array/Sex"
+        android:textAlignment="center"
+        android:layout_marginBottom="5dp">
+    </Spinner>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_fmail"
+        android:layout_below="@id/user_sex"
+        android:hint="FATHER'S EMAIL"
+        android:textAlignment="center"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/rectangle"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_mmail"
+        android:layout_below="@id/user_fmail"
+        android:hint="MOTHER'S EMAIL"
+        android:textAlignment="center"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/rectangle"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_address"
+        android:layout_below="@id/user_mmail"
+        android:hint="ADDRESS"
+        android:textAlignment="center"
+        android:background="@drawable/rectangle"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signupbutton"
+        android:text="Sign Up"
+        android:textAlignment="center"
+        android:layout_below="@+id/user_address"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

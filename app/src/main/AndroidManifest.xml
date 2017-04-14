@@ -17,7 +17,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".Profile"></activity>
+        <activity android:name=".Profile" />
+        <activity android:name=".MedicalHistory" />
+        <activity android:name=".SignUp" />
+        <activity
+            android:name=".FamilyHistory"
+            android:label="@string/title_activity_family_history"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

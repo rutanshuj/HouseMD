@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".55"
+        android:layout_weight=".45"
         android:id="@+id/rlayout"
         android:background="@color/colorPrimary">
 
@@ -36,8 +36,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rlayout1"
-        android:layout_weight=".05">
+        android:id="@+id/rlayout1">
 
         <TextView
             android:layout_width="match_parent"
@@ -45,6 +44,7 @@
             android:id="@+id/user_details"
             android:text="User Details"
             android:textSize="25dp"
+            android:layout_marginTop="3dp"
             android:gravity="center"/>
 
         <android.support.design.widget.FloatingActionButton
@@ -52,16 +52,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:fabSize="normal"
+            android:src="@mipmap/ic_launcher"
             android:layout_alignParentRight="true"/>
+
 
     </RelativeLayout>
 
-    <fragment
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".45"
-        android:id="@+id/frag">
+        android:layout_weight=".45">
 
-    </fragment>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/profilerv">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </FrameLayout>
 
 </LinearLayout>

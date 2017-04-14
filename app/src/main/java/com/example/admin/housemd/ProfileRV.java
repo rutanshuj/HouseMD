@@ -34,9 +34,9 @@ public class ProfileRV extends RecyclerView.Adapter<ProfileRV.RecyclerViewHolder
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
 
-        DataProvider dataProviderExchange = arrayList.get(position);
-        holder.attribute.setText(dataProviderExchange.getAttribute());
-        holder.value.setText(dataProviderExchange.getValue());
+        DataProvider dataProvider = arrayList.get(position);
+        holder.attribute.setText(dataProvider.getAttribute());
+        holder.value.setText(dataProvider.getValue());
 
     }
 
