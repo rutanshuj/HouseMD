@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "325448365290",
+    "firebase_url": "https://housemd-257b9.firebaseio.com",
+    "project_id": "housemd-257b9",
+    "storage_bucket": "housemd-257b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325448365290:android:0418becfa7cb5c91",
+        "android_client_info": {
+          "package_name": "com.example.admin.housemd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325448365290-92fb0vnsaeo1qo86rcbe3sjgdch8iug7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.admin.housemd",
+            "certificate_hash": "47322f9a188a0364beebc26892b692e01f103b5e"
+          }
+        },
+        {
+          "client_id": "325448365290-5tc75jhr198oa735e2iuvnn308nkl4cr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.admin.housemd",
+            "certificate_hash": "b0d898c82d3758e1d50fc715317b1fc0da23d630"
+          }
+        },
+        {
+          "client_id": "325448365290-fhanm6n2ste8l7sjb5cubtdaj61ljro8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtnttBQlob73-g7OnpYre9xqZiGwCaXYQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325448365290-fhanm6n2ste8l7sjb5cubtdaj61ljro8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

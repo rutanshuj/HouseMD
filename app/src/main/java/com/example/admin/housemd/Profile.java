@@ -51,26 +51,22 @@ public class Profile extends AppCompatActivity {
             }
         });
 /*
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab1 = (FloatingActionButton) findViewById(R.id.fab_1);
-
         Animation show_fab_1 = AnimationUtils.loadAnimation(getApplication(), R.anim.fab1_show);
         Animation hide_fab_1 = AnimationUtils.loadAnimation(getApplication(), R.anim.fab1_hide);
 
-        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) fab.getLayoutParams();
-        layoutParams.rightMargin += (int) (fab.getWidth() * 1.7);
-        layoutParams.bottomMargin += (int) (fab.getHeight() * 0.25);
-        fab.setLayoutParams(layoutParams);
-        fab.startAnimation(show_fab_1);
-        fab.setClickable(true);
+        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) fab1.getLayoutParams();
+        layoutParams.rightMargin += (int) (fab1.getWidth() * 1.7);
+        layoutParams.bottomMargin += (int) (fab1.getHeight() * 0.25);
+        fab1.setLayoutParams(layoutParams);
+        fab1.startAnimation(show_fab_1);
+        fab1.setClickable(true);
 
-        FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) fab.getLayoutParams();
-        layoutParams.rightMargin -= (int) (fab.getWidth() * 1.7);
-        layoutParams.bottomMargin -= (int) (fab.getHeight() * 0.25);
-        fab.setLayoutParams(layoutParams);
-        fab.startAnimation(hide_fab_1);
-        fab.setClickable(false);
-
+        FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) fab1.getLayoutParams();
+        layoutParams.rightMargin -= (int) (fab1.getWidth() * 1.7);
+        layoutParams.bottomMargin -= (int) (fab1.getHeight() * 0.25);
+        fab1.setLayoutParams(layoutParams);
+        fab1.startAnimation(hide_fab_1);
+        fab1.setClickable(false);
 */
     }
 }
