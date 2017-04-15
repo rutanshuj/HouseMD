@@ -5,29 +5,70 @@
     android:id="@+id/frame_layout">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="TEXT"
-            android:textSize="20sp"/>
-        <TextView
+            android:orientation="vertical"
+            android:background="#f2284a"
+            android:padding="40dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/heatleft"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="TEXT"
-            android:textSize="20sp"/>
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="TEXT"
-            android:textSize="20sp"/>
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="TEXT"
-            android:textSize="20sp"/>
+            android:orientation="vertical">
+            <TextView
+                android:textColor="#f2284a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="PROFILE"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:textColor="#f2284a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DIAGNOSE"
+                android:padding="20dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:padding="20dp"
+                android:textColor="#f2284a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NEARBY"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:padding="20dp"
+                android:textColor="#f2284a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABOUT US"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:padding="20dp"
+                android:textColor="#f2284a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOG OUT"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+
+
     </LinearLayout>
 
 </FrameLayout>

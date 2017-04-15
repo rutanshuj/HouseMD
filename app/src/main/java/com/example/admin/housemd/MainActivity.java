@@ -2,7 +2,6 @@ package com.example.admin.housemd;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
@@ -16,8 +15,6 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
         mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL);
