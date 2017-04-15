@@ -140,7 +140,6 @@ public class SignUp extends AppCompatActivity {
                     myRef.child("Address").setValue(adddress.getText().toString());
                     myRef.child("Father's Email").setValue(fmail.getText().toString());
                     myRef.child("Mother's Email").setValue(mmail.getText().toString());
-                    myRef.child("Sex").setValue(s_spinner.getSelectedItem());
 
                 }
             }

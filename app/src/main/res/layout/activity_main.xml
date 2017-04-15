@@ -9,9 +9,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/next"
-        android:text="NEXT"
-        android:gravity="center"/>
+        android:id="@+id/nextpage"
+        android:text="NEXT page"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -19,6 +20,15 @@
         android:id="@+id/sign_up"
         android:text="Sign Up"
         android:textAlignment="center"
-        android:layout_below="@+id/next"/>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/nextpage"/>
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/next"
+    android:text="Next"
+    android:layout_below="@+id/sign_up"
+    android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

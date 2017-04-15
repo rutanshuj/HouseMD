@@ -46,7 +46,7 @@ public class Profile extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),FamilyHistory.class);
+                Intent i = new Intent(getApplicationContext(),MedicalHistory.class);
                 startActivity(i);
             }
         });
