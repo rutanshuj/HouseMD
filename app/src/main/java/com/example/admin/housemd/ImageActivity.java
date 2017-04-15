@@ -38,6 +38,8 @@ public class ImageActivity extends AppCompatActivity {
         imageView2 = (ImageView) findViewById(R.id.iv2);
 
 
+
+
     }
 
     public static Bitmap createContrast(Bitmap src, double value) {
@@ -137,5 +139,3 @@ public class ImageActivity extends AppCompatActivity {
     }
 
 }
-
-
