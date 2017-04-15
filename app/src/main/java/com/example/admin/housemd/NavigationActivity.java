@@ -33,7 +33,7 @@ public class NavigationActivity extends AppCompatActivity {
 
         mp1FragmentManager = getSupportFragmentManager();
         mp1FragmentTransaction = mp1FragmentManager.beginTransaction();
-        mp1FragmentTransaction.replace(R.id.containerToBeFilled, new Symptoms1Frag()).commit();
+       // mp1FragmentTransaction.replace(R.id.containerToBeFilled, new Symptoms1Frag()).commit();
 
         mp1NavigationView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
             @Override
@@ -42,36 +42,36 @@ public class NavigationActivity extends AppCompatActivity {
             }
         });
 
-        mp1NavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                android.support.v4.app.Fragment fragment = null;
-                Class fragmentClass = null;
-
-                switch (item.getItemId()) {
-                    case R.id.home:
-                        fragmentClass = Symptoms1Frag.class;
-                        break;
-                    case R.id.symptoms:
-                        fragmentClass = Symptoms1Frag.class;
-                        break;
-                }
-                try {
-                    fragment = (android.support.v4.app.Fragment) fragmentClass.newInstance();
-                    FragmentManager fragmentManager = getSupportFragmentManager();
-                    fragmentManager.beginTransaction().replace(R.id.containerToBeFilled, fragment).commit();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-                // Set action bar title
-                setTitle(item.getTitle());
-                // Close the navigation drawer
-                mp1NavigationLayout.closeDrawers();
-                return false;
-            }
-        });
+//        mp1NavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+//
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                android.support.v4.app.Fragment fragment = null;
+//                Class fragmentClass = null;
+//
+//                switch (item.getItemId()) {
+//                    case R.id.home:
+//                        fragmentClass = Symptoms1Frag.class;
+//                        break;
+//                    case R.id.symptoms:
+//                        fragmentClass = Symptoms1Frag.class;
+//                        break;
+//                }
+//                try {
+//                    fragment = (android.support.v4.app.Fragment) fragmentClass.newInstance();
+//                    FragmentManager fragmentManager = getSupportFragmentManager();
+//                    fragmentManager.beginTransaction().replace(R.id.containerToBeFilled, fragment).commit();
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//
+//                // Set action bar title
+//                setTitle(item.getTitle());
+//                // Close the navigation drawer
+//                mp1NavigationLayout.closeDrawers();
+//                return false;
+//            }
+//        });
 
 
         android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar_mp1);

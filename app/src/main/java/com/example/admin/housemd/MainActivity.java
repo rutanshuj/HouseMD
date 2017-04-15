@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent j = new Intent(MainActivity.this, LoginActivity.class);
+                Intent j = new Intent(MainActivity.this, GPSLocation.class);
                 startActivity(j);
             }
         });
