@@ -1,8 +1,14 @@
 package com.example.admin.housemd;
 
+import android.app.Activity;
+import android.content.ContentResolver;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
@@ -16,6 +22,7 @@ import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +36,10 @@ public class ImageActivity extends AppCompatActivity {
 
     ImageView imageView1, imageView2;
 
+
+    private static final int TAKE_PICTURE = 1;
+    private Uri imageUri;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,10 +48,31 @@ public class ImageActivity extends AppCompatActivity {
         imageView1 = (ImageView) findViewById(R.id.iv1);
         imageView2 = (ImageView) findViewById(R.id.iv2);
 
-
-
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        File photo = new File(Environment.getExternalStorageDirectory(),  "Pic.jpg");
+        intent.putExtra(MediaStore.EXTRA_OUTPUT,
+                Uri.fromFile(photo));
+        imageUri = Uri.fromFile(photo);
+        startActivityForResult(intent, TAKE_PICTURE);
 
     }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case TAKE_PICTURE:
+                if (resultCode == Activity.RESULT_OK) {
+                    Uri selectedImage = imageUri;
+                    getContentResolver().notifyChange(selectedImage, null);
+                    ContentResolver cr = getContentResolver();
+                    Bitmap bitmap;
+                    Intent i = new Intent(ImageActivity.this, ResultActivity.class);
+                    startActivity(i);
+                }
+        }
+    }
+
 
     public static Bitmap createContrast(Bitmap src, double value) {
         // image size
