@@ -42,7 +42,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         v1 = 12.9165;
         v2 = 79.1325;
         v3 = 28.7041;
-        v4 = 77.1025;gi
+        v4 = 77.1025;
 
 
         LatLng location1 = new LatLng(v1, v2);
