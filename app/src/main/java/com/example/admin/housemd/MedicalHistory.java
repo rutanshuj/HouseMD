@@ -1,13 +1,17 @@
 package com.example.admin.housemd;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-public class MedicalHistory extends AppCompatActivity {
+public class MedicalHistory extends Fragment {
 
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
@@ -19,15 +23,17 @@ public class MedicalHistory extends AppCompatActivity {
 
     ArrayList<DataProviderMedicalHistory> arrayList = new ArrayList<DataProviderMedicalHistory>();
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medical_history);
 
-        recyclerView = (RecyclerView) findViewById(R.id.medical_history_rv);
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.activity_checking,container,false);
+
+        recyclerView = (RecyclerView) view.findViewById(R.id.medical_history_rv);
         adapter = new MedicalHistoryRV(arrayList);
         recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getApplicationContext());
+        layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
@@ -37,5 +43,6 @@ public class MedicalHistory extends AppCompatActivity {
             arrayList.add(dataProviderMedicalHistory);
             i++;
         }
+        return view;
     }
 }

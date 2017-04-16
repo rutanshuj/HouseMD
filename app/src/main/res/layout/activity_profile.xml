@@ -13,23 +13,24 @@
         android:layout_height="0dp"
         android:layout_weight=".45"
         android:id="@+id/rlayout"
-        android:background="@color/colorPrimary">
+        android:background="@color/colorMain">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/profile_image"
-            android:layout_above="@+id/name"
-            android:background="@mipmap/ic_launcher"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_dp"
+            android:layout_centerHorizontal="true"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/name"
+            android:textColor="@color/colorWhite"
             android:text="Akhil Agarwal"
             android:textSize="30dp"
             android:gravity="center"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"/>
 
     </RelativeLayout>
 
@@ -43,6 +44,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/user_details"
             android:text="User Details"
+            android:textColor="@color/colorMain"
             android:textSize="25dp"
             android:layout_marginTop="3dp"
             android:gravity="center"/>

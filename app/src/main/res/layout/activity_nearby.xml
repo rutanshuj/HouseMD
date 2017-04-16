@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/frame1">
@@ -22,9 +21,9 @@
         android:text="Hello"
         android:layout_centerHorizontal="true" />
 
-    </FrameLayout>
+    </RelativeLayout>
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/frame2"
@@ -42,9 +41,9 @@
             android:text="Hello"
             android:layout_centerHorizontal="true" />
 
-    </FrameLayout>
+    </RelativeLayout>
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/frame3"
@@ -62,6 +61,6 @@
             android:text="Hello"
             android:layout_centerHorizontal="true" />
 
-    </FrameLayout>
+    </RelativeLayout>
 
-</LinearLayout>
+</RelativeLayout>

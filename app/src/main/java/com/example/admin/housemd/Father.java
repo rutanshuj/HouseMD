@@ -1,13 +1,17 @@
 package com.example.admin.housemd;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-public class Father extends AppCompatActivity {
+public class Father extends Fragment {
 
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
@@ -19,15 +23,16 @@ public class Father extends AppCompatActivity {
 
     ArrayList<DataProviderFather> arrayList = new ArrayList<DataProviderFather>();
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_father);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        recyclerView = (RecyclerView) findViewById(R.id.father);
+        View view = inflater.inflate(R.layout.activity_father,container,false);
+
+        recyclerView = (RecyclerView) view.findViewById(R.id.father);
         adapter = new FatherRV(arrayList);
         recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getApplicationContext());
+        layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
@@ -38,5 +43,6 @@ public class Father extends AppCompatActivity {
             i++;
         }
 
+        return view;
     }
 }

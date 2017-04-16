@@ -35,7 +35,8 @@
             android:name=".Symptoms"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".NearbyActivity" />
-        <activity android:name=".NearbyDisease"></activity>
+        <activity android:name=".NearbyDisease" />
+        <activity android:name=".Checking"></activity>
     </application>
 
 </manifest>
