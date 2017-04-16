@@ -8,13 +8,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 /**
  * Created by Adm on 15-Apr-17.
  */
 
 public class ListAdapter2 extends ArrayAdapter {
 
-    public ListAdapter2(Context context, String[] heading, Integer[] button) {
+    public ListAdapter2(Context context, ArrayList<String> heading, Integer[] button) {
         super(context, R.layout.checkedrow, heading);
 
         this.context = context;
@@ -23,7 +25,7 @@ public class ListAdapter2 extends ArrayAdapter {
     }
 
     private final Context context;
-    private final String[] heading;
+    private final ArrayList<String> heading;
     private final Integer[] button;
 
     int i = 0;
@@ -36,13 +38,13 @@ public class ListAdapter2 extends ArrayAdapter {
         TextView txtHead = (TextView) rowView.findViewById(R.id.text_sl);
         ImageButton bcall = (ImageButton) rowView.findViewById(R.id.remove_button);
 
-        txtHead.setText(heading[position]);
-        bcall.setImageResource(R.mipmap.ic_launcher);
+        txtHead.setText(heading.get(position));
 
         bcall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                heading.remove(position);
+                ListAdapter2.this.notifyDataSetChanged();
             }
         });
 

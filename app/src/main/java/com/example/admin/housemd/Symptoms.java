@@ -2,6 +2,8 @@ package com.example.admin.housemd;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckedTextView;
 import android.widget.EditText;
@@ -12,13 +14,16 @@ import java.util.ArrayList;
 
 public class Symptoms extends AppCompatActivity {
 
-    final ArrayList<String> selectedItemst = new ArrayList<>();
+    final ArrayList<String> selectedItems = new ArrayList<>();
+    final ArrayList<String> allitems = new ArrayList<>();
+
     EditText inputSearch;
     ListView check, select;
     CheckedTextView textview;
     Button b;
 
-    String[] text = {"asd", "sad", "sadaasd"};
+    String[] items = {"Nuasea", "asffds","dsfsfdsf","cdcdcdc", "asjhhaksf"};
+    String[] text = {"asd", "sad", "cdcd", "sadaasd"};
     Integer[] integer;
 
     @Override
@@ -26,15 +31,65 @@ public class Symptoms extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_symptoms);
 
-        ListAdapter1 adapter1 = new ListAdapter1(getApplicationContext(),textview);
+        //ListAdapter1 adapter1 = new ListAdapter1(getApplicationContext(),textview);
+        //check.setAdapter(adapter1);
+
+        for (int i=0;i<items.length;i++) {
+            selectedItems.add(items[i]);
+        }
+
+        for (int j=0;j<text.length;j++)
+        {
+            allitems.add(text[j]);
+        }
+
+        textview = (CheckedTextView) findViewById(R.id.txt_lan);
+
+        final ListAdapter1 adapter1 = new ListAdapter1(getApplicationContext(),allitems);
         check = (ListView) findViewById(R.id.symptoms_list_view);
         check.setAdapter(adapter1);
-
-
-
-        final ListAdapter2 adapter2 = new ListAdapter2(getApplicationContext(),text,integer);
+/*
+        check.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simplerow,R.id.txt_lan, text);
+        check.setAdapter(adapter);
+*/
+        final ListAdapter2 adapter2 = new ListAdapter2(getApplicationContext(),selectedItems,integer);
         select = (ListView) findViewById(R.id.checkedList);
         select.setAdapter(adapter2);
+
+        inputSearch = (EditText) findViewById(R.id.inputSearch);
+
+        check.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                String item_selected = ((TextView) view).getText().toString();
+                String data=(String)adapterView.getItemAtPosition(i);
+
+                if (selectedItems.contains(data))
+                {
+                    selectedItems.remove(data);
+                    allitems.add(data);
+                    select.setAdapter(adapter2);
+                }
+                else
+                {
+                    selectedItems.add(data);
+                    select.setAdapter(adapter2);
+                    allitems.remove(data);
+                    check.setAdapter(adapter1);
+                }
+            }
+        });
+
+/*
+        b = (Button) findViewById(R.id.remove_button);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedItems.remove(select.getSelectedItem());
+            }
+        });
+*/
 
     }
 }

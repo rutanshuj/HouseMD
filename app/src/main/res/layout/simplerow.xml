@@ -7,7 +7,7 @@
     android:gravity="center_vertical"
     android:checkMark="?android:attr/listChoiceIndicatorMultiple"
     android:paddingLeft="5dp"
-    android:text="Check Me!!!">
+    android:text="Check Me!!!"
+    android:textColor="@color/colorBlack">
 
 </CheckedTextView>
-

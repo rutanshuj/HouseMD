@@ -12,8 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Search Symptoms"
-        android:id="@+id/inputSearch"
-        android:inputType="textVisiblePassword"/>
+        android:id="@+id/inputSearch"/>
     <ListView
         android:id="@+id/checkedList"
         android:layout_width="match_parent"

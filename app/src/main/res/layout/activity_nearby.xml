@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/frame1">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/nb_image1"/>
+
+    <TextView
+        android:id="@+id/nb_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:layout_centerHorizontal="true" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/frame2"
+        android:layout_below="@+id/frame1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/nb_image2"/>
+
+        <TextView
+            android:id="@+id/nb_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:layout_centerHorizontal="true" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/frame3"
+        android:layout_below="@id/frame2">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/nb_image3"/>
+
+        <TextView
+            android:id="@+id/nb_name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:layout_centerHorizontal="true" />
+
+    </FrameLayout>
+
+</LinearLayout>

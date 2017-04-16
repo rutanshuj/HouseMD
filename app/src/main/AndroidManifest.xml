@@ -31,7 +31,11 @@
         <activity
             android:name=".NavigationActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity android:name=".Symptoms"></activity>
+        <activity
+            android:name=".Symptoms"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".NearbyActivity" />
+        <activity android:name=".NearbyDisease"></activity>
     </application>
 
 </manifest>

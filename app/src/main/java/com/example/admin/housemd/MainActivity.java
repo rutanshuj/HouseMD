@@ -16,12 +16,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+/*
+        ActionBar bar = getActionBar();
+        bar.setBackgroundDrawable(new ColorDrawable());
+*/
+
         button1 = (Button) findViewById(R.id.nextpage);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), Profile.class);
+                Intent i = new Intent(getApplicationContext(), NearbyActivity.class);
                 startActivity(i);
             }
         });

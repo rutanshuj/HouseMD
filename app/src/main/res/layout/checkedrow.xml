@@ -3,16 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-<TextView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:id="@+id/text_sl"
-    android:padding="4dp"
-    android:textColor="#000000"
-    android:layout_height="30dp"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true" />
+
+    <TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/text_sl"
+        android:padding="4dp"
+        android:textColor="#000000"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <ImageButton
         android:id="@+id/remove_button"
         android:layout_width="30dp"
